@@ -20,7 +20,7 @@ public class Customer {
             discount = 0.05;
         } else if (type == CustomerType.PREMIUM) {
             discount = 0.1;
-        } else if (type == CustomerType.VIP) {
+        } else (type == CustomerType.VIP) {
             discount = 0.2;
         }
     }

@@ -22,7 +22,6 @@ public class Order {
     public void addItem(String item, double price) {
         items.add(item);
         prices.add(price);
-        calculateTotal();
     }
 
     public void calculateTotal() {
@@ -30,10 +29,9 @@ public class Order {
         for (double price : prices) {
             totalPrice += price;
         }
-        applyDiscount();
     }
 
-    public void applyDiscount() {
+    public void applyDiscountIfEligible() {
         discountedPrice = totalPrice - (totalPrice * customer.getDiscount());
     }
 
