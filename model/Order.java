@@ -31,8 +31,8 @@ public class Order {
         }
     }
 
-    public void applyDiscountIfEligible() {
-        discountedPrice = totalPrice - (totalPrice * customer.getDiscount());
+    public void applyDiscountIfEligible(double discountedPercentage) {
+        discountedPrice = totalPrice - (totalPrice * discountedPercentage);
     }
 
     public void printOrder() {
